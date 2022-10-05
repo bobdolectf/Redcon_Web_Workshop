@@ -4,7 +4,7 @@
 
 Welcome to the Redcon 2022 Web Workshop!
 
-Twitter: @bobhacksthings @
+Twitter: @bobhacksthings @systemdumb
 Discord: BobDole#7758 Gambit#1303
 
 ## Getting Started
