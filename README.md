@@ -29,6 +29,6 @@ Pick an IP and place an X in checked out, if an IP is already checked out please
   
 ## Documentation
 
-Once your are settled on your desktop session open up Firefox and your Workbook will be your home page. As mentioned previously we are going to work through some labs that Omar Santos combined into a self-contained deployment. 
+Once your are settled on your desktop session open up Firefox and the Lab guide will be your home page. As mentioned previously we are going to work through some labs that Omar Santos combined into a self-contained deployment. Skip past the Docker walkthrough to page 9 as that is already setup for you.
 
 In the titlebar you will see multiple other bookmarks, these will take you to the bridged vulnerable web apps that we will be working through.
