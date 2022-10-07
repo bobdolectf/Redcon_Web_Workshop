@@ -1,4 +1,4 @@
-# 2021 OWASP TOP 10
+# 2021 Open Web Applicaiton Security Project (OWASP) TOP 10
 
 ## Broken Access Control
 A01:2021-Broken Access Control moves up from the fifth position; 94% of applications were tested for some form of broken access control. The 34 Common Weakness Enumerations (CWEs) mapped to Broken Access Control had more occurrences in applications than any other category.
