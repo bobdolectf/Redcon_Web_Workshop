@@ -75,6 +75,7 @@ modify the storeId parameter  productId=1&storeId=1;whoami
 
 ### Student Lab
 https://portswigger.net/web-security/os-command-injection/lab-blind-time-delays
+
 https://portswigger.net/web-security/os-command-injection/lab-blind-output-redirection
 
 ### Instructor Solution (2 Mins)
@@ -84,6 +85,7 @@ Modify the email parameter, note that this is blind so you are really just count
 csrf=0pmJEQphMpXzJH6DZ24qLkxUgeWCZ95g&name=asdf&email=asdffsd%40gmail.com||ping+-c+10+127.0.0.1||&subject=asfd&message=asfd
 
 https://portswigger.net/web-security/os-command-injection/lab-blind-output-redirection
+
 //walkthrough
 open any item and check the image location then add your output to it
 https://0a8e003a03edd6b0c07c39a800c800f4.web-security-academy.net/image?filename=output.txt
@@ -94,6 +96,7 @@ SSRF flaws occur whenever a web application is fetching a remote resource withou
 
 ### Demo (2 Mins)
 https://portswigger.net/web-security/ssrf/lab-basic-ssrf-against-localhost
+
 //walkthrough
 Admin interface only available if logged in as an administrator, or if requested from loopback
 check the stock and look at the request, modify the stockAPI parameter 
@@ -167,48 +170,6 @@ modify your GET request to call the next directory up
 GET /files/exploit.php HTTP/1.1
 ```
 
-## Discussion Authentication (10 Mins)
-Confirmation of the user's identity, authentication, and session management is critical to protect against authentication-related attacks. There may be authentication weaknesses if the application:
-
-- Permits automated attacks such as credential stuffing, where the attacker has a list of valid usernames and passwords.
-
-- Permits brute force or other automated attacks.
-
-- Permits default, weak, or well-known passwords, such as "Password1" or "admin/admin".
-
-- Uses weak or ineffective credential recovery and forgot-password processes, such as "knowledge-based answers," which cannot be made safe.
-
-- Uses plain text, encrypted, or weakly hashed passwords data stores (see A02:2021-Cryptographic Failures).
-
-- Has missing or ineffective multi-factor authentication.
-
-- Exposes session identifier in the URL.
-
-- Reuse session identifier after successful login.
-
-- Does not correctly invalidate Session IDs. User sessions or authentication tokens (mainly single sign-on (SSO) tokens) aren't properly invalidated during logout or a period of inactivity.
-
-### Demo (2 mins)
-https://portswigger.net/web-security/authentication/password-based/lab-username-enumeration-via-different-responses
-//walkthrough
-make sure you only copy the bottom third of the usernames, throw those into intruder and brute the username should be "autodiscover"
-grab the middle third of the passwords and spray that at password, it should be "555555"
-
-https://portswigger.net/web-security/authentication/multi-factor/lab-2fa-simple-bypass
-//walkthrough
-log in to your account, check out the page after 2FA.   /my-account
-
-log out and log in as carlos and instead of the pin put that in
-
-### Student Lab (5 mins)
-https://portswigger.net/web-security/authentication/password-based/lab-broken-brute-force-protection-multiple-credentials-per-request
-
-for the passwords break out a little vimfu :%s/$/"/g and :%s/^/"/g
-take the passwords and make sure you pass them in an array on an intercept
-"username":"carlos",
-"password": [
-"12345",
-]
 
 ## CTF TIME!!! 
 
