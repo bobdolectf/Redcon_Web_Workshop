@@ -102,10 +102,10 @@ Admin interface only available if logged in as an administrator, or if requested
 check the stock and look at the request, modify the stockAPI parameter 
 
 ```
-first to this to get the delete user url
+first try this to get the delete user url
 stockApi=http://localhost/admin/
 
-then to this to delete the user
+then try this to delete the user
 stockApi=http://localhost/admin/delete?username=carlos
 
 ```
