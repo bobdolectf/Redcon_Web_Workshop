@@ -9,6 +9,33 @@ Make sure all students have access to the Kali station and are fully functional.
 ## Methodology
 Talk about broad methodology, this is not meant to get you pulling bounties from H1 or Synack but more to have cognizance of common web app mistakes and a good understanding of how each bug class is exploited
 
+## Asset Discovery
+Asset discovery is about assessing an organization's attack surface through the lens of application security. A motivated actor will spend days discovering all of your endpoints through a myriad of methods, hence you should be aware of what assets you're leaving out there. 
+
+A forgotten or misplaced asset can be the foothold an attacker needs to pivot deeper into your network.
+
+Here are a few recon tools and techniques you should be aware of when staging test environments that touch the internet:
+* Passive Recon Tools
+  * Shodan & Censys constantly crawl the internet and provide a searchable database for attackers to passively surveil your external network.
+  * SSL cert registries like crt.sh will record domain names (even internal ones)
+  * Wayback Machine & Alienvault provide a glimpse at older versions of applications
+* Active Recon Tools
+  * Amass: combines ASN, SSL certificates, historical online databases and DNS records to map your online presence.
+  * Massscan/nmap: Quickly performs port scans against a large number of assets.
+  * Feroxbuster/ffuf: Perform forced browsing and quickly discover unprotected and potentially sensitive directories
+
+## Identifying Data Entry Points
+Attackers generally want to break a mixture of Confidentiality, Integrity, or Availability (CIA) and thus our approach should focus on answering questions similar to the following:
+* Does this data entry point allow us to affect the integrity of the application's data?
+* Can we abuse this functionality to cause a denial of service?
+* Should this information be available to us? Can we circumvent an access control to access confidential information?
+
+Ultimately the answers to these questions depend on what the organization defines as acceptable. Hence, it is generally a good idea to identify what types of information the organization cares about before assessing application security. For instance, if the organization is a government entity, they may not care if someone can abuse an IDOR bug to retrieve public documents because they are intended to be viewed by everyone. We should narrow our focus on endpoints and bug classes that can impact one of the pillars of the CIA triad in a meaningful way.
+
+Finding these data entry points is typically accomplished by crawling the site with something like [gospider](https://github.com/jaeles-project/gospider) which will recursively follow links of a given URL. The output can be searched for query parameters, web forms, and API endpoints. This data can also be supplimented by web archive queries, which serve to provide a snapshot of an older version of an application.
+
+Lastly, JavaScript files are typically a gold mine for API endpoints and can contain sensitive keys or reveal how adminitrative functions work without requiring access to restricted administrative content. These files can also trivialize the parameter mining process and lead to access control bypasses. 
+
 ## Discussion Broken Access Controls (10 Mins)
 Access control enforces policy such that users cannot act outside of their intended permissions. Failures typically lead to unauthorized information disclosure, modification, or destruction of all data or performing a business function outside the user's limits
 
