@@ -17,12 +17,12 @@ A forgotten or misplaced asset can be the foothold an attacker needs to pivot de
 Here are a few recon tools and techniques you should be aware of when staging test environments that touch the internet:
 * Passive Recon Tools
   * Shodan & Censys constantly crawl the internet and provide a searchable database for attackers to passively surveil your external network.
-  * SSL cert registries like crt.sh will record domain names (even internal ones)
-  * Wayback Machine & Alienvault provide a glimpse at older versions of applications
+  * SSL cert registries like crt.sh will record domain names (even internal ones).
+  * Wayback Machine & Alienvault provide a glimpse at older versions of applications.
 * Active Recon Tools
   * Amass: combines ASN, SSL certificates, historical online databases and DNS records to map your online presence.
   * Massscan/nmap: Quickly performs port scans against a large number of assets.
-  * Feroxbuster/ffuf: Perform forced browsing and quickly discover unprotected and potentially sensitive directories
+  * Feroxbuster/ffuf: Perform forced browsing and quickly discover unprotected and potentially sensitive directories.
 
 ## Identifying Data Entry Points
 Attackers generally want to break a mixture of Confidentiality, Integrity, or Availability (CIA) and thus our approach should focus on answering questions similar to the following:
