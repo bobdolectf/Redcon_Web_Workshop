@@ -8,7 +8,7 @@ Instructor Led Getting Started
 
 Instructor Led discussion on Methodology
 
-## Discussion Broken Access Controls 
+## Broken Access Controls 
 
 Access control enforces policy such that users cannot act outside of their intended permissions. Failures typically lead to unauthorized information disclosure, modification, or destruction of all data or performing a business function outside the user's limits
 
@@ -18,7 +18,7 @@ Access control enforces policy such that users cannot act outside of their inten
 
 ### Instructor Solution 
 
-## Discussion Business Logic Vulnerabilities 
+## Business Logic Vulnerabilities 
 
 Most security problems are weaknesses in an application that result from a broken or missing security control (authentication, access control, input validation, etc…). By contrast, business logic vulnerabilities are ways of using the legitimate processing flow of an application in a way that results in a negative consequence to the organization.
 
@@ -27,7 +27,7 @@ Most security problems are weaknesses in an application that result from a broke
 
 ### Instructor solution 
 
-## Discussion Injection
+## Command Injection
 
 An application is vulnerable to attack when:
 
@@ -48,7 +48,7 @@ An application is vulnerable to attack when:
 ### Instructor Solution 
 
 
-## Discussion Server Side Request Forgery 
+## Server Side Request Forgery 
 
 SSRF flaws occur whenever a web application is fetching a remote resource without validating the user-supplied URL. It allows an attacker to coerce the application to send a crafted request to an unexpected destination, even when protected by a firewall, VPN, or another type of network access control list (ACL).
 
@@ -57,7 +57,7 @@ SSRF flaws occur whenever a web application is fetching a remote resource withou
 
 ### Instructor Solution 
 
-## Discussion File Upload 
+## File Upload 
 Uploaded files represent a significant risk to applications. The first step in many attacks is to get some code to the system to be attacked. Then the attack only needs to find a way to get the code executed. Using a file upload helps the attacker accomplish the first step.
 
 The consequences of unrestricted file upload can vary, including complete system takeover, an overloaded file system or database, forwarding attacks to back-end systems, client-side attacks, or simple defacement. It depends on what the application does with the uploaded file and especially where it is stored.
