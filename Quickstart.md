@@ -1,5 +1,6 @@
 ## Quickstart
-![] (https://github.com/bobdolectf/Redcon_Web_Workshop/blob/main/r3dc0n_patch.png)
+![R3dc0n](https://github.com/bobdolectf/Redcon_Web_Workshop/blob/main/r3dc0n_patch.png?raw=true)
+
 ### Admins
 
 If you need any help reach out:
