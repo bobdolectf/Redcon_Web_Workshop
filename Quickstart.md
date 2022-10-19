@@ -1,5 +1,5 @@
 ## Quickstart
-![R3dc0n](https://github.com/bobdolectf/Redcon_Web_Workshop/blob/main/r3dc0n_patch.png?raw=true)
+![RTV](https://github.com/bobdolectf/Redcon_Web_Workshop/blob/main/RTV-Devil-Sticker.png?raw=true)
 
 ### Admins
 
