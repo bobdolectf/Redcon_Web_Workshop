@@ -1,5 +1,5 @@
 ## Quickstart
-
+![] (https://github.com/bobdolectf/Redcon_Web_Workshop/blob/main/r3dc0n_patch.png)
 ### Admins
 
 If you need any help reach out:
