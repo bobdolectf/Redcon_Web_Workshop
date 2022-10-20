@@ -159,7 +159,7 @@ stockApi=http://localhost/admin/delete?username=carlos
 
 ### Instructor Solution (2 Mins)
 
-<https://portswigger.net/web-security/ssrf/lab-ssrf-with-blacklist-filter>
+https://portswigger.net/web-security/ssrf/lab-ssrf-with-blacklist-filter
 
 
 //walkthrough
@@ -178,7 +178,6 @@ And finally
 http://127.1/%2561%64mi%6e/delete?username=carlos
 
 ## Discussion File Upload (10 Mins)
-
 Uploaded files represent a significant risk to applications. The first step in many attacks is to get some code to the system to be attacked. Then the attack only needs to find a way to get the code executed. Using a file upload helps the attacker accomplish the first step.
 
 The consequences of unrestricted file upload can vary, including complete system takeover, an overloaded file system or database, forwarding attacks to back-end systems, client-side attacks, or simple defacement. It depends on what the application does with the uploaded file and especially where it is stored.

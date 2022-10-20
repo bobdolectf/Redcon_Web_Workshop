@@ -23,9 +23,9 @@ Pick an IP and place an X in checked out, if an IP is already checked out please
     -  to use the shared clipboard open the noVNC panel on the left and click "clipboard" to copy paste between host and Kali
     2. VNC through SSH tunnels (grab your favorite vnc viewer, password is on spreadsheet)
 ```
-  ssh NfL 11111:127.0.0.1:5901 -i ~/Downloads.redcon.pem kali@< IP >
+ssh NfL 11111:127.0.0.1:5901 -i ~/Downloads/redcon.pem kali@< IP >
 
-  vncviewer 127.0.0.1:11111
+vncviewer 127.0.0.1:11111
 ```
   
 

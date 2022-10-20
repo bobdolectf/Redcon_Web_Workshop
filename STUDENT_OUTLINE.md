@@ -41,7 +41,7 @@ Lastly, JavaScript files are typically a gold mine for API endpoints and can con
 
 Access control enforces policy such that users cannot act outside of their intended permissions. Failures typically lead to unauthorized information disclosure, modification, or destruction of all data or performing a business function outside the user's limits
 
-### Student Lab (5 mins)
+### Student Lab 
 
 <https://portswigger.net/web-security/access-control/lab-url-based-access-control-can-be-circumvented>
 
@@ -87,6 +87,7 @@ SSRF flaws occur whenever a web application is fetching a remote resource withou
 ### Instructor Solution 
 
 ## File Upload 
+
 Uploaded files represent a significant risk to applications. The first step in many attacks is to get some code to the system to be attacked. Then the attack only needs to find a way to get the code executed. Using a file upload helps the attacker accomplish the first step.
 
 The consequences of unrestricted file upload can vary, including complete system takeover, an overloaded file system or database, forwarding attacks to back-end systems, client-side attacks, or simple defacement. It depends on what the application does with the uploaded file and especially where it is stored.
@@ -96,7 +97,7 @@ The consequences of unrestricted file upload can vary, including complete system
 
 ### Instructor Solution 
 
-## HTTP Request Smuggling (10 Mins)
+## HTTP Request Smuggling 
  
 HTTP request smuggling is a technique for interfering with the    way a web site processes sequences of HTTP requests that are      received from one or more users. Request smuggling                vulnerabilities are often critical in nature, allowing an         attacker to bypass security controls, gain unauthorized access    to sensitive data, and directly compromise other application      users.
 
@@ -112,4 +113,5 @@ https://portswigger.net/web-security/request-smuggling/lab-obfuscating-te-header
 ### Instructor Solution 
 
 ## CTF TIME!!! 
-Now for the Challenge! We've set up JuiceShop on your local instance and a CTFd scoreboard here: <IP>  Go ahead and register and you'll have 20 mins to see who can score the highest with all of your new skillz.
+
+Now for the Challenge! We've set up JuiceShop on your local instance <http://10.6.6.12:3000> and a CTFd scoreboard here: <IP>  Go ahead and register and you'll have 20 mins to see who can score the highest with all of your new skillz.
