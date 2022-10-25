@@ -10,7 +10,7 @@ Make sure all students have access to the Kali station and are fully functional.
 
 Talk about broad methodology, this is not meant to get you pulling bounties from H1 or Synack but more to have cognizance of common web app mistakes and a good understanding of how each bug class is exploited
 
-## Asset Discovery
+## Asset Discovery (Austin)
 
 Asset discovery is about assessing an organization's attack surface through the lens of application security. A motivated actor will spend days discovering all of your endpoints through a myriad of methods, hence you should be aware of what assets you're leaving out there. 
 
@@ -26,7 +26,7 @@ Here are a few recon tools and techniques you should be aware of when staging te
   * Massscan/nmap: Quickly performs port scans against a large number of assets.
   * Feroxbuster/ffuf: Perform forced browsing and quickly discover unprotected and potentially sensitive directories.
 
-## Identifying Data Entry Points
+## Identifying Data Entry Points (Austin)
 
 Attackers generally want to break a mixture of Confidentiality, Integrity, or Availability (CIA) and thus our approach should focus on answering questions similar to the following:
 * Does this data entry point allow us to affect the integrity of the application's data?
@@ -39,11 +39,11 @@ Finding these data entry points is typically accomplished by crawling the site w
 
 Lastly, JavaScript files are typically a gold mine for API endpoints and can contain sensitive keys or reveal how adminitrative functions work without requiring access to restricted administrative content. These files can also trivialize the parameter mining process and lead to access control bypasses. 
 
-## Discussion Broken Access Controls (10 Mins)
+## Discussion Broken Access Controls (10 Mins) (Zack)
 
 Access control enforces policy such that users cannot act outside of their intended permissions. Failures typically lead to unauthorized information disclosure, modification, or destruction of all data or performing a business function outside the user's limits
 
-### Demo (2 Mins)
+### Demo (2 Mins) (Austin)
 
 <https://portswigger.net/web-security/access-control/lab-unprotected-admin-functionality>
 
@@ -53,22 +53,31 @@ Enumerate site, nothing really on the main page.  Check out robots.txt and see t
 <https://portswigger.net/web-security/access-control/lab-unprotected-admin-functionality-with-unpredictable-url>
 
 //walkthrough
+check page source
 notice this in the source /admin-al12ax and navigate to it
 
 ### Student Lab (5 mins)
 
 <https://portswigger.net/web-security/access-control/lab-url-based-access-control-can-be-circumvented>
 
-### Instructor Solution (1 Mins)
+### Instructor Solution (1 Mins) (Austin)
 
 <https://portswigger.net/web-security/access-control/lab-url-based-access-control-can-be-circumvented>
 
 //walkthrough
+explanation...the x-orginal-url and host headers are used by certain frameworks like php to extend functionality however if the expectation is that the header can't be passed by the client.....you get this
 add X-Original-URL: /admin to request and see the difference
+
+first send this
+GET / HTTP/1.1
+X-Original-URL: /admin/delete
+
+
+finally this is what we end up with
 GET /?username=carlos HTTP/1.1
 X-Original-URL: /admin/delete
 
-## Discussion Business Logic Vulnerabilities (10 Mins)
+## Discussion Business Logic Vulnerabilities (10 Mins) (Zack)
 
 Most security problems are weaknesses in an application that result from a broken or missing security control (authentication, access control, input validation, etc…). By contrast, business logic vulnerabilities are ways of using the legitimate processing flow of an application in a way that results in a negative consequence to the organization.
 
@@ -77,13 +86,16 @@ Most security problems are weaknesses in an application that result from a broke
 <https://portswigger.net/web-security/logic-flaws/examples/lab-logic-flaws-high-level>
 
 //walkthrough
-log in with weiner : peter and add the jacket to your cart, check the http history and give it a look, if you go negative with it you can get a negative balance and then you can balance out the transaction 
+log in with weiner : peter and add the jacket to your cart
+check the http history and give it a look, 
+if you go negative with it you can get a negative balance and then you can balance out the transaction 
+make sure you use intercept
 
-### Student Lab (5 Mins)
+### Student Lab (5 Mins) 
 
 <https://portswigger.net/web-security/logic-flaws/examples/lab-logic-flaws-excessive-trust-in-client-side-controls>
 
-### Instructor solution (2 Mins)
+### Instructor solution (2 Mins) (Austin)
 
 <https://portswigger.net/web-security/logic-flaws/examples/lab-logic-flaws-excessive-trust-in-client-side-controls>
 
