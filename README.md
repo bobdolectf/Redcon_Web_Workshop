@@ -6,7 +6,7 @@ Welcome to the Red Team Village R3dc0n 2023 Web Workshop!
 
 ## Getting Started
 
-A fresh kali is already prebuilt for you running websploit via docker here: <https://bit.ly/3RziogR>
+A fresh kali is already prebuilt for you here: <https://bit.ly/3RziogR>
 
 Pick an IP and place an X in checked out, if an IP is already checked out please grab one that is free. 
 
