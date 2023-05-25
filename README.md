@@ -2,11 +2,7 @@
 
 ## Welcome
 
-Welcome to the Red Team Village R3dc0n 2022 Web Workshop!
-
-Twitter: @bobhacksthings @systemdumb
-
-Discord: BobDole#7758 Gambit#1303
+Welcome to the Red Team Village R3dc0n 2023 Web Workshop!
 
 ## Getting Started
 
