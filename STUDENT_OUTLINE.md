@@ -114,4 +114,6 @@ https://portswigger.net/web-security/request-smuggling/lab-obfuscating-te-header
 
 ## CTF TIME!!! 
 
-Now for the Challenge! We've set up JuiceShop on your local instance <http://10.6.6.12:3000> and a CTFd scoreboard here: <IP>  Go ahead and register and you'll have 20 mins to see who can score the highest with all of your new skillz.
+Now for the Challenge! We've set up JuiceShop on your local instance <http://10.6.6.12:3000> 
+The scoreboard here: <IP> 
+ Go ahead and register and you'll have 20 mins to see who can score the highest with all of your new skillz.
